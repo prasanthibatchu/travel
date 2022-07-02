@@ -13,6 +13,10 @@
   position: absolute;
   color: #fff;
 }
+.nav-icons {
+  display: none;
+
+}
 
 .hero {
   width: 100%;
