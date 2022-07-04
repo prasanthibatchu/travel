@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 /* header */
 .navbar {
   width: 100%;
@@ -232,22 +230,15 @@ display:inline-flex;
 }
 /* footer */
 
-.main-footer{
-  background-color:rgb(90, 127, 34);
-  padding-top: 2em;
-  bottom: 0%;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  
-}
 
 
 .footer {
+  bottom: 0%;
   width: 100%;
   padding: 2rem 0;
   background-color: #333;
   color: #fff;
+  position: relative;
 }
 
 
@@ -271,3 +262,12 @@ margin: auto;
   list-style-type:none;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+.content-wrap {
+  flex: 1;
+}

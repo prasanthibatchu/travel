@@ -1,23 +1,30 @@
 import React from "react";
 import { Header } from "./components/header";
-import { Videos } from "./components/video";
-import { Destinations } from "./components/destinations";
-import { Search } from "./components/search";
-import { Selects } from "./components/select";
+import { Home } from "./components/body";
 import { Footer } from "./components/footer";
-import { ImgCarousel } from "./components/carousel";
-import "./App.css";
 
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Login } from "./components/login";
 function App() {
   return (
-    <div className="App">
+    <div className="page-container">
+      <div className="content-wrap">
+     
+     <Router> 
       <Header />
-      <Videos />
-      <Destinations />
-      <Search />
-      <Selects />
-      <ImgCarousel />
-      <Footer />
+              <Routes>
+              <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+              </Routes>
+     
+     </Router>
+        
+     
+      
+      
+    </div>
+    <Footer />
     </div>
   );
 }
