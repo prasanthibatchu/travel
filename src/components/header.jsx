@@ -1,7 +1,6 @@
 import React from "react";
-import { AppBar, Toolbar, Grid } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { AppBar, Toolbar } from "@mui/material";
+import logo from '../assets/logo.png'
 
 export const Header = () => {
   return (
@@ -13,17 +12,10 @@ export const Header = () => {
         style={{ boxShadow: "none" }}
       >
         <Toolbar>
-        <h3>Hello...</h3>
-
-          <Grid
-            container
-            direction="row"
-            justifyContent="flex-end"
-            alignItems="center"
-          >
-            <SearchIcon />
-            <PersonOutlineIcon />
-          </Grid>
+        <a href="/">
+            <img src={logo} alt="maldivas" width="150" height="100"/>
+          </a>
+      
         </Toolbar>
       </AppBar>
       </div>

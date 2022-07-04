@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-
+/* header */
 .navbar {
   width: 100%;
   height: 80px;
@@ -19,11 +19,11 @@ color:black;
 display:inline-flex;
 
 }
-
+/* video */
 .hero {
   width: 100%;
-  height: 100vh;
-  color: #fff;
+  height: 100%;
+  color:transparent ;
   position: relative;
 }
 .overlay {
@@ -54,6 +54,7 @@ display:inline-flex;
   padding: 1rem;
   width: 100%;
 }
+
 .form {
   display: flex;
   background-color: #ffffffcc;
@@ -80,7 +81,7 @@ display:inline-flex;
   outline: none;
 }
 
-
+/* destination */
 .destinations {
   width: 100%;
   text-align: center;
@@ -113,6 +114,7 @@ display:inline-flex;
 .image-grid-row-2 {
   grid-row: span 2;
 }
+
 .search {
   width: 100%;
   padding: 3rem 0;
@@ -195,7 +197,7 @@ display:inline-flex;
 .search Button {
   margin: .4rem;
 }
-
+/* select */
 .selects .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -228,7 +230,7 @@ display:inline-flex;
   font-size: 2rem;
   font-weight: 500;
 }
-
+/* footer */
 
 .main-footer{
   background-color:rgb(90, 127, 34);
@@ -240,6 +242,7 @@ display:inline-flex;
   
 }
 
+
 .footer {
   width: 100%;
   padding: 2rem 0;
@@ -247,50 +250,24 @@ display:inline-flex;
   color: #fff;
 }
 
-.footer h3 {
-  color: var(--primary-light);
-}
 
-.footer .top, .bottom {
+
+.footer .bottom {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: 25%;
+margin: auto;
   align-items: center;
 }
 
-.footer .social {
-  display: flex;
-  justify-content: space-between;
-  width: 280px;
-}
 
 .footer .icon {
  color: var(--primary-light);
 }
 
-.footer .left, .right {
-  display: flex;
-  align-items: center;
-}
+
 
 .footer ul {
-  display: flex;
+  display: inline;
+  list-style-type:none;
 }
 
-.footer li {
-  padding: .5rem;
-}
-
-.carousel {
-  padding: 2rem 0;
-}
-
-
-.carousel img {
-  height: 90vh;
-  object-fit: cover;
-}
-
-.thumbs-wrapper, .carousel-status {
-  display: none;
-}

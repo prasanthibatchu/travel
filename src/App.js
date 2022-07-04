@@ -5,7 +5,7 @@ import { Destinations } from "./components/destinations";
 import { Search } from "./components/search";
 import { Selects } from "./components/select";
 import { Footer } from "./components/footer";
-import {ImgCarousel} from './components/carousel'
+import { ImgCarousel } from "./components/carousel";
 import "./App.css";
 
 function App() {
