@@ -24,7 +24,8 @@ export const Search = () => {
                             <div>
                                 <h3>NO ONE INCLUDES MORE</h3>
                                 <p>ALL-INCLUSIVE COMPANY FOR 20 YEARS IN-A-ROW</p>
-                                <Button variant="contained">View Packages</Button>
+                                <a href="/login">
+                                <Button variant="contained">View Packages</Button></a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +59,8 @@ export const Search = () => {
                                 <input type="date" />
                             </div>
                         </div>
-                        <Button variant="contained">Rates & Availabilities </Button>
+                        <a href="/login">
+                        <Button variant="contained">Rates & Availabilities </Button></a>
                     </form>
                 </div>
             </div>

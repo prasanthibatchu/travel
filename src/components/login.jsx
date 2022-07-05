@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState,useContext,useEffect } from "react";
 import {Container,Box,Grid,TextField,Button} from '@mui/material'
 import { useNavigate } from "react-router-dom";
-
+import { UserContext } from "./context";
 export const Login=()=>{
   const [user,setUser]=useState({email:"",pass:""})
   const [err,setErr]=useState(0)
   let history=useNavigate()
+  const { setUserProfile } = useContext(UserContext);
+  useEffect(() => {
+    console.log(localStorage.getItem("Email"));
+    setUserProfile({ user_email: localStorage.getItem("Email") });
+  }, []);
   const Valid=()=>{
+    if (localStorage.getItem("Email")) {
+      console.log(localStorage.getItem("Email"));
+      setUserProfile({ user_email: localStorage.getItem("Email") });
+     alert("already user exist in system")
+      history("/logout");
+    } else {
     setErr(0)
     if(!user.email.includes("@")){
       setErr(1)
@@ -17,18 +28,29 @@ export const Login=()=>{
       alert("please enter correct password")
     }
     else{
-      history('/')
+      localStorage.getItem("Email")
+          ? console.log(localStorage.getItem("Email"))
+          : console.log("no user login");
+        localStorage.setItem("Email", user.email);
+        localStorage.setItem("Password", user.pass);
+
+        setUserProfile({ user_email: user.email });
+        // console.log(user_email);
+       alert("user login successfully")
+      history('/book')
       console.log(user)
     }
+  }
   }
   const onChangeValue=(e)=>{
     setUser({...user,[e.target.name]:e.target.value})
   }
  
     return(
-        <div style={{backgroundImage:"url('https://robbreport.com/wp-content/uploads/2019/09/vommuli-island-med-1.jpg?w=1000')",backgroundSize: "cover",height: "100vh", marginTop:'-70px',}}>
-        <h1>Login Form</h1>
+        <div>
+       <h1>Login Form</h1>
         <Container maxWidth="sm">
+        
           <Box m={5} p={5} sx={{ backgroundColor: "aliceblue" }}>
             <Grid
               container
@@ -63,6 +85,7 @@ export const Login=()=>{
                   <Button variant="contained" onClick={Valid} >
                     Login
                   </Button>
+                  <p>If you don't have account please <a href="/signup">signup</a></p>
                 </Grid>
               </Grid>
             </Grid>

@@ -235,7 +235,7 @@ display:inline-flex;
 .footer {
   bottom: 0%;
   width: 100%;
-  padding: 2rem 0;
+  padding: 0.1 rem 0;
   background-color: #333;
   color: #fff;
   position: relative;
@@ -270,4 +270,14 @@ margin: auto;
 }
 .content-wrap {
   flex: 1;
+}
+
+body{
+ background-image:url('https://robbreport.com/wp-content/uploads/2019/09/vommuli-island-med-1.jpg?w=1000');
+    background-size: cover;
+    height: 100%;
+    
+    margin-top:'0';
+    background-repeat: no-repeat;
+
 }

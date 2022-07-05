@@ -30,9 +30,13 @@ export const Header = () => {
             alignItems="center"
           >
             <ButtonGroup>
-              <Button variant="text" component={Link} to="/login" style={{color:"white"}}>
+            <Button variant="text" component={Link} to="/signup" style={{color:"black"}}>
                 <h3>Signup</h3>
               </Button>
+              <Button variant="text" component={Link} to="/login" style={{color:"black"}}>
+                <h3>Signin</h3>
+              </Button>
+             
               </ButtonGroup>
               </Grid>
         </Toolbar>
